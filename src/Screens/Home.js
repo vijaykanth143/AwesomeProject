@@ -14,6 +14,7 @@ import Header from '../Components/Header';
 import Searchbar from '../Components/searchbar';
 import Card from '../Components/Card';
 import Currentbooking from '../Components/Currentbooking';
+import Property from '../Components/Property';
 
 const data = [
   {
@@ -36,18 +37,22 @@ const data = [
 ];
 const searchByCity = [
   {
+    id: 1,
     image: require('./../../assets/Images/bangalore.jpg'),
     city: 'Bangalore',
   },
   {
+    id: 2,
     image: require('./../../assets/Images/kolkata.jpg'),
     city: 'Kolkata',
   },
   {
+    id: 3,
     image: require('./../../assets/Images/mumbai.jpg'),
     city: 'Mumbai',
   },
 ];
+
 export default class Home extends Component {
   render() {
     return (
@@ -162,6 +167,7 @@ export default class Home extends Component {
           </Text>
           <Currentbooking />
         </View>
+        <Property />
       </KeyboardAwareScrollView>
     );
   }

@@ -7,25 +7,26 @@ import CustomButton from './CustomButton';
 
 const dataSource = [
   {
+    id: 1,
     url: img1,
   },
   {
+    id: 2,
     url: require('./../../assets/Images/kolkata.jpg'),
   },
   {
+    id: 3,
     url: require('./../../assets/Images/mumbai.jpg'),
   },
 ];
 export class Currentbooking extends Component {
   render() {
     return (
-      <View
-        height="45%"
-        width="100%"
-        style={{padding: 15, paddingHorizontal: 35}}>
+      <View style={[{padding: 15, paddingHorizontal: 35}]}>
         <View style={{backgroundColor: 'white'}}>
           <View>
             <Slideshow
+              key={dataSource.map(item => item.id)}
               dataSource={dataSource}
               style={{height: 200, width: '100%'}}
               height={170}
