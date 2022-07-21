@@ -5,6 +5,7 @@ import {
   Image,
   PermissionsAndroid,
   TouchableWithoutFeedback,
+  TouchableOpacity,
 } from 'react-native';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Ionicons from 'react-native-vector-icons/Ionicons';
@@ -20,21 +21,24 @@ export default class Header extends Component {
           justifyContent: 'space-between',
           alignItems: 'flex-start',
         }}>
-        <TouchableWithoutFeedback style={{justifyContent: 'center'}}>
-          <Image
-            style={styles.logo}
-            source={require('./../../assets/Images/BRHlogoexpanded.png')}
-          />
-        </TouchableWithoutFeedback>
+        <Image
+          style={styles.logo}
+          source={require('./../../assets/Images/BRHlogoexpanded.png')}
+        />
+
         <View style={{alignItems: 'baseline', marginTop: 10}}>
           <View style={styles.iconContainer}>
-            <MaterialCommunityIcons
-              name="qrcode-scan"
-              size={20}
-              style={{marginRight: 15}}
-              color={'orange'}
-            />
-            <Ionicons name="menu-outline" size={30} color={'orange'} />
+            <TouchableOpacity>
+              <MaterialCommunityIcons
+                name="qrcode-scan"
+                size={20}
+                style={{marginRight: 15}}
+                color={'orange'}
+              />
+            </TouchableOpacity>
+            <TouchableOpacity>
+              <Ionicons name="menu-outline" size={30} color={'orange'} />
+            </TouchableOpacity>
           </View>
         </View>
       </View>
@@ -44,10 +48,10 @@ export default class Header extends Component {
 
 const styles = StyleSheet.create({
   logo: {
-    height: '10%',
+    height: '60%',
     width: '50%',
     resizeMode: 'contain',
-    marginLeft: 13
+    marginTop: 15,
   },
   iconContainer: {
     //flex: 1,

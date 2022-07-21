@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 import React, {Component} from 'react';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
-import InputFields from '../Components/InputFields';
+
 import {FilledTextField} from 'react-native-material-textfield';
 const data = [
   {
