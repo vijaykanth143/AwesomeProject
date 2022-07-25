@@ -15,12 +15,12 @@ export default class Card extends Component {
         style={[
           {
             alignItems: 'center',
-            justifyContent: 'center',
-            width: '20%',
-            height: 120,
+
+            width: '21%',
+            height: 100,
             padding: 10,
             marginHorizontal: 8,
-            marginBottom: 20,
+            marginBottom: 10,
             shadowOffset: {width: 10, height: 10},
             shadowColor: 'black',
             shadowOpacity: 3,
@@ -34,16 +34,23 @@ export default class Card extends Component {
             name={this.props.icon}
             size={40}
             color={'orange'}
-            style={{marginBottom: 0}}
+            style={{marginBottom: 5}}
           />
         ) : (
-          <Icon name={this.props.icon} size={40} color={'orange'} />
+          <Icon
+            name={this.props.icon}
+            size={40}
+            color={'orange'}
+            style={{marginBottom: 5}}
+          />
         )}
 
-        <Text style={{color: 'black', textAlign: 'center', fontSize: 12}}>
+        <Text style={{color: 'black', textAlign: 'center', fontSize: 10}}>
           {this.props.text}
+    
         </Text>
-        <Text style={{color: 'black', textAlign: 'center', fontSize: 12}}>
+
+        <Text style={{color: 'black', textAlign: 'center', fontSize: 10}}>
           {this.props.qr}
         </Text>
       </View>

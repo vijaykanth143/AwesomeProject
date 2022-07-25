@@ -22,7 +22,7 @@ const searchByCity = [
 export default class Property extends Component {
   render() {
     return (
-      <View style={{padding: 30}}>
+      <View style={{padding: 25}}>
         <View
           style={{
             flexDirection: 'row',
