@@ -4,12 +4,13 @@ import React, {Component} from 'react';
 const searchByCity = [
   {
     id: 1,
-    image: require('./../../assets/Images/bangalore.jpg'),
+    image: require('./../../assets/Images/kolkata.jpg'),
     city: 'Bangalore',
   },
   {
     id: 2,
-    image: require('./../../assets/Images/kolkata.jpg'),
+
+    image: require('./../../assets/Images/bangalore.jpg'),
     city: 'Kolkata',
   },
   {
@@ -37,13 +38,21 @@ export default class Property extends Component {
           data={searchByCity}
           horizontal
           showsHorizontalScrollIndicator={false}
+          keyExtractor={(item, index) => index}
           renderItem={({item}) => (
             <View
               style={{
-                backgroundColor: 'white',
                 flexDirection: 'row',
                 alignItems: 'center',
-                marginVertical: 20,
+
+                margin: 20,
+                marginLeft: 5,
+                shadowOffset: {width: 10, height: 10},
+                shadowColor: 'black',
+                shadowOpacity: 3,
+                elevation: 3,
+                // background color must be set
+                backgroundColor: '#fff',
               }}>
               <Image
                 source={item.image}
@@ -86,4 +95,9 @@ export default class Property extends Component {
   }
 }
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  elevation: {
+    shadowColor: '#52006A',
+    elevation: 20,
+  },
+});

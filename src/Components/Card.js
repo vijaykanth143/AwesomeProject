@@ -15,12 +15,18 @@ export default class Card extends Component {
         style={[
           {
             alignItems: 'center',
+            justifyContent: 'center',
             width: '20%',
+            height: 120,
             padding: 10,
-            marginHorizontal: 10,
+            marginHorizontal: 8,
             marginBottom: 20,
+            shadowOffset: {width: 10, height: 10},
             shadowColor: 'black',
-            elevation: 10,
+            shadowOpacity: 3,
+            elevation: 3,
+            // background color must be set
+            backgroundColor: '#fff',
           },
         ]}>
         {this.props.icon == 'qrcode-scan' ? (
@@ -28,7 +34,7 @@ export default class Card extends Component {
             name={this.props.icon}
             size={40}
             color={'orange'}
-            style={{marginBottom: 5}}
+            style={{marginBottom: 0}}
           />
         ) : (
           <Icon name={this.props.icon} size={40} color={'orange'} />

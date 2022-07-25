@@ -80,7 +80,13 @@ export default class Home extends Component {
             source={require('./../../assets/Images/signinPageDoll.png')}
           />
         </View>
-        <View style={{padding: 10, flexDirection: 'row', width: '100%'}}>
+        <View
+          style={{
+            padding: 10,
+            flexDirection: 'row',
+            justifyContent: 'center',
+            width: '100%',
+          }}>
           {data.map(item => {
             return (
               <Card icon={item.iconname} text={item.text} qr={item.text2} />

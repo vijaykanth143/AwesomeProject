@@ -22,7 +22,18 @@ const dataSource = [
 export class Currentbooking extends Component {
   render() {
     return (
-      <View style={[{padding: 15, paddingHorizontal: 35}]}>
+      <View
+        style={[
+          {
+            marginHorizontal: 35,
+            shadowOffset: {width: 10, height: 10},
+            shadowColor: 'black',
+            shadowOpacity: 3,
+            elevation: 3,
+            // background color must be set
+            backgroundColor: '#fff',
+          },
+        ]}>
         <View style={{backgroundColor: 'white'}}>
           <View>
             <Slideshow
@@ -51,22 +62,22 @@ export class Currentbooking extends Component {
             <Icon name="hearto" color={'black'} size={16} />
           </TouchableOpacity>
           <View style={{paddingVertical: 20, paddingHorizontal: 10}}>
-            <Text style={{color: 'black', fontSize: 20, marginBottom: 10}}>
+            <Text style={{color: 'black', fontSize: 23, marginBottom: 10}}>
               Property name
             </Text>
-            <Text style={{color: 'grey', fontSize: 15, marginBottom: 10}}>
+            <Text style={{color: 'grey', fontSize: 18, marginBottom: 10}}>
               Booking ID
             </Text>
             <View style={{flexDirection: 'row'}}>
-              <View style={{marginRight: 25}}>
-                <Text style={{color: 'black', fontSize: 15}}>From</Text>
-                <Text style={{color: 'grey', fontSize: 12}}>Jan 27 2022</Text>
-                <Text style={{color: 'grey', fontSize: 12}}>10.00 AM</Text>
+              <View style={{marginRight: 65}}>
+                <Text style={{color: 'black', fontSize: 18}}>From</Text>
+                <Text style={{color: 'grey', fontSize: 15}}>Jan 27 2022</Text>
+                <Text style={{color: 'grey', fontSize: 15}}>10.00 AM</Text>
               </View>
               <View>
-                <Text style={{color: 'black', fontSize: 15}}>To</Text>
-                <Text style={{color: 'grey', fontSize: 12}}>Jan 31 2022</Text>
-                <Text style={{color: 'grey', fontSize: 12}}>10.00 AM</Text>
+                <Text style={{color: 'black', fontSize: 18}}>To</Text>
+                <Text style={{color: 'grey', fontSize: 15}}>Jan 31 2022</Text>
+                <Text style={{color: 'grey', fontSize: 15}}>10.00 AM</Text>
               </View>
             </View>
             <CustomButton />
