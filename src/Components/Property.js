@@ -1,6 +1,23 @@
-import {Text, StyleSheet, View} from 'react-native';
+import {Text, StyleSheet, View, Image, FlatList} from 'react-native';
 import React, {Component} from 'react';
 
+const searchByCity = [
+  {
+    id: 1,
+    image: require('./../../assets/Images/bangalore.jpg'),
+    city: 'Bangalore',
+  },
+  {
+    id: 2,
+    image: require('./../../assets/Images/kolkata.jpg'),
+    city: 'Kolkata',
+  },
+  {
+    id: 3,
+    image: require('./../../assets/Images/mumbai.jpg'),
+    city: 'Mumbai',
+  },
+];
 export default class Property extends Component {
   render() {
     return (
@@ -12,10 +29,58 @@ export default class Property extends Component {
             alignItems: 'center',
           }}>
           <Text style={{color: 'black', fontSize: 20, fontWeight: '700'}}>
-            Linked Properties
+            {this.props.title}
           </Text>
           <Text style={{color: 'orange'}}>View all</Text>
         </View>
+        <FlatList
+          data={searchByCity}
+          horizontal
+          showsHorizontalScrollIndicator={false}
+          renderItem={({item}) => (
+            <View
+              style={{
+                backgroundColor: 'white',
+                flexDirection: 'row',
+                alignItems: 'center',
+                marginVertical: 20,
+              }}>
+              <Image
+                source={item.image}
+                style={{
+                  width: 180,
+                  height: 120,
+                  margin: 10,
+                  resizeMode: 'contain',
+                }}
+              />
+              <View style={{paddingVertical: 20, paddingHorizontal: 10}}>
+                <Text style={{color: 'grey', fontSize: 20, marginBottom: 10}}>
+                  Property name
+                </Text>
+                <Text style={{color: 'black', fontSize: 15, marginBottom: 10}}>
+                  Booking ID
+                </Text>
+                <View style={{flexDirection: 'row'}}>
+                  <View style={{marginRight: 25}}>
+                    <Text style={{color: 'black', fontSize: 15}}>From</Text>
+                    <Text style={{color: 'grey', fontSize: 12}}>
+                      Jan 27 2022
+                    </Text>
+                    <Text style={{color: 'grey', fontSize: 12}}>10.00 AM</Text>
+                  </View>
+                  <View>
+                    <Text style={{color: 'black', fontSize: 15}}>To</Text>
+                    <Text style={{color: 'grey', fontSize: 12}}>
+                      Jan 31 2022
+                    </Text>
+                    <Text style={{color: 'grey', fontSize: 12}}>10.00 AM</Text>
+                  </View>
+                </View>
+              </View>
+            </View>
+          )}
+        />
       </View>
     );
   }

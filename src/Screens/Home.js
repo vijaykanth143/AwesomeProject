@@ -167,7 +167,9 @@ export default class Home extends Component {
           </Text>
           <Currentbooking />
         </View>
-        <Property />
+
+        <Property title="Linked Properties" />
+        <Property title="Upcoming Bookings" />
       </KeyboardAwareScrollView>
     );
   }
