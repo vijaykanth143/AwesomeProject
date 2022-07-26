@@ -34,6 +34,7 @@ export default class Property extends Component {
           </Text>
           <Text style={{color: 'orange'}}>View all</Text>
         </View>
+
         <FlatList
           data={searchByCity}
           horizontal
@@ -44,11 +45,11 @@ export default class Property extends Component {
               style={{
                 flexDirection: 'row',
                 alignItems: 'center',
-
-                margin: 20,
-                marginLeft: 5,
+                marginVertical: 10,
+                marginRight: 20,
+                marginLeft: 0,
                 shadowOffset: {width: 10, height: 10},
-                shadowColor: 'black',
+                shadowColor: 'orange',
                 shadowOpacity: 3,
                 elevation: 3,
                 // background color must be set
