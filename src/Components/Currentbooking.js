@@ -80,7 +80,19 @@ export class Currentbooking extends Component {
                 <Text style={{color: 'grey', fontSize: 15}}>10.00 AM</Text>
               </View>
             </View>
-            <CustomButton />
+            <CustomButton
+              style1={{
+                borderColor: 'orange',
+                borderWidth: 1,
+                alignItems: 'center',
+                width: '40%',
+                paddingVertical: 8,
+                paddingHorizontal: 0,
+                marginTop: 20,
+                marginBottom: 10,
+              }}
+              text="CHECK IN"
+            />
           </View>
         </View>
       </View>
